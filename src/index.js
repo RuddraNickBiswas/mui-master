@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from '@material-ui/core';
+import theme from './theme/theme';
+
+const rootEl = document.getElementById('root')
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+ <ThemeProvider theme = {theme}>
+   <App />
+ </ThemeProvider>
+   ,
+ rootEl
 );
 
 // If you want to start measuring performance in your app, pass a function
